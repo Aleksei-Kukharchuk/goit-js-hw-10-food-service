@@ -20,16 +20,13 @@ function toChageTheme() {
     }
 
     localStorage.setItem('theme-switcher-position', body.classList.value);
-    console.log(localStorage.getItem('theme-switcher-position'));
 };
 
 if (localStorage.getItem('theme-switcher-position') === "dark-theme") {
     themeSwitcher.checked = true;
     body.classList.remove('light-theme');
     body.classList.add('dark-theme');
-} else { 
-    console.log("светлая тема");
-}
+} 
 
 const menuMarkup = menuTemplates(menu);
 menuContainer.insertAdjacentHTML('beforeend', menuMarkup);
